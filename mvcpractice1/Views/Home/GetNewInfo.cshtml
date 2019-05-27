@@ -1,0 +1,25 @@
+﻿@model mvcpractice1.Models.NewUser
+@{
+    ViewBag.Title = "GetNewInfo";
+}
+
+<h2>GetNewInfo</h2>
+
+<fo-rm action="/Home/Summary" method="post">
+    @*this is what shows up on the form in a text box*@
+
+
+    @*1 user enters info*@
+    First Name
+    <input type="text" name="Name" required /><br />
+    Last Name
+    <input type="text" name="LastName" required /><br />
+    Street Address
+    <input type="text" name="StreetAddress" required /><br />
+    State
+    <input type="tel" name="State" required /><br />
+    ZipCode
+    <input type="password" name="ZipCode" required /><br />
+    @*2 submit button goes  action above*@
+    <input type="submit" value="Submit Data" />
+</fo-rm>
