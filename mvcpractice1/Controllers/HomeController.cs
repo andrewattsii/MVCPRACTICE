@@ -25,8 +25,12 @@ namespace mvcpractice1.Controllers
 
             return View();
         }
+        public ActionResult GetNewInfo()
+        {
+            return View();
+        }
         [HttpPost]
-        public ActionResult GetNewInfo(string name, string lastName,string streetAddress,string state,string zipcode)
+        public ActionResult Summary(string name, string lastName, string streetAddress, string state, string zipcode)
         {
             Models.NewUser user = new Models.NewUser();
             user.Name = name;
@@ -34,12 +38,12 @@ namespace mvcpractice1.Controllers
             user.StreetAddress = streetAddress;
             user.State = state;
             user.ZipCode = zipcode;
-
             return View(user);
+
         }
-        public ActionResult Summary(NewUser newUser)
+        public ActionResult SummaryPage(NewUser user1)
         {
-            return View(newUser);
+            return View(user1);
         }
     }
 }
